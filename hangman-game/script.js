@@ -45,6 +45,43 @@ function displayWord() {
 }
 
 // Update the wrong letters
+function updateWrongLettersEl() {
+  //display wrong letters
+  wrongLettersEl.innerHTML = `
+  ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
+  ${wrongLetters.map(letter => `<span>${letter}</span>`)}
+  `;
+
+  //display parts
+  figureParts.forEach((part, index) => {
+    const errors = wrongLetters.length;
+
+    if(index < errors) {
+      part.style.display = 'block';
+    } else {
+      part.style.display = 'none';
+    }
+  });
+
+  //check if lost
+
+  if(wrongLetters.length === figureParts.length) {
+    finalMessage.innerText = 'Unfortunately you lost. :(';
+    popup.style.display = 'flex';
+  }
+}
+
+
+
+//show notification
+function showNotification() {
+  notification.classList.add('show');
+
+setTimeout(() => {
+  notification.classList.remove('show');
+}, 2000);
+}
+
 //keydown letter press
 window.addEventListener("keydown", (e) => {
 	//console.log(e.keyCode);
