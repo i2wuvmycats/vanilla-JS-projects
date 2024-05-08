@@ -1,0 +1,28 @@
+/* styles.css */
+
+/* Resetting default browser styles */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Setting a background color and font for the whole page */
+body {
+  background-color: hotpink;
+  font-family: Arial, sans-serif;
+}
+
+/* Styling the heading */
+h1 {
+  color: #333;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Styling the paragraph */
+p {
+  color: #666;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+}
