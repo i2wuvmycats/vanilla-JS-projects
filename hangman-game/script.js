@@ -122,3 +122,5 @@ popup.style.display = 'none';
 });
 
 displayWord();
+
+// molly's code 
