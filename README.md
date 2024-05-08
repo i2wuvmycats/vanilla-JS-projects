@@ -1,2 +1,3 @@
-# vanilla-JS-projects
-# vanilla-JS-projects
+# VanillaJSProjects
+fun javascript games \
+by Molly
