@@ -71,8 +71,6 @@ function updateWrongLettersEl() {
   }
 }
 
-
-
 //show notification
 function showNotification() {
   notification.classList.add('show');
