@@ -3,11 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Webpage</title>
+    <title>Hangman Game</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>This is a basic HTML webpage with CSS styling.</p>
+    <h1>Hangman</h1>
+    <p>to find the hidden word - enter a letter</p>
+    <div class="game-container"> 
+      <svg height="250" width="200" class="figure-container">
+      <line x1="60" y1="20" x2="140" y2="20" />
+      <line x1="140" y1="20" x2="140" y2="50" /> 
+      <line x1="60" y1="20" x2="60" y2="230" />
+      <line x1="20" y1="230" x2="100" y2="230" />
+
+      <!-- head --> 
+      <circle cx="140" cy="70" r="20" class="figure-part" />
+      <!-- body -->
+      <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+      <!-- arms -->
+      <line x1="140" y1="120" x2="120" y2="100" class="figure-part" />
+      <line x1="140" y1="120" x2="160" y2="100" class="figure-part" />
+      <!-- legs -->
+      <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
+      <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
+      </svg> 
+
+      <div class="wrong-letters-container">
+       <div id="wrong letters">
+       <p>Wrong</p>
+       <span>e,r,y,t </span>
+       </div>
+    </div>
+ 
+  <div class="word" id="word">
+   <div class="letter">h</div>
+   <div class="letter">e</div>
+   <div class="letter">l</div>
+   <div class="letter">l</div>
+   <div class="letter">o</div>
+  </div>
+ </div>
+ <!--container for final messages -->
+ <div class="popup-container" id="popup-container">
+  <div class="popup" id="popup">
+   <h2 id="final-message">You Have Won :D</h2>
+   <button id="play-button">Play Again</button>
+  </div>
+
+  <!--Notification-->
+  <div class="notification-container" id="notification-container"></div>
+  <p>You have already entered this letter</p>
 </body>
 </html>
